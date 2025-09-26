@@ -1,0 +1,25 @@
+<!-- views/trips/show.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= trip.name %></title>
+  </head>
+  <body>
+    <h1><%= trip.name %></h1>
+    <p>Date: <%= new Date(trip.date).toLocaleDateString() %></p>
+    <p>Status: <%= trip.status %></p>
+    <h2>Activities:</h2>
+    <ul>
+      <% trip.activities.forEach(activity => { %>
+        <li><%= activity.description %> - <%= new Date(activity.activityDate).toLocaleDateString() %></li>
+      <% }); %>
+      <% if (!trip.activities.length) { %>
+        <li>No activities yet.</li>
+      <% } %>
+    </ul>
+    <a href="/trips/<%= trip._id %>/activities/new">Add Activity</a>
+    <a href="/trips">Back to Trips</a>
+  </body>
+</html>

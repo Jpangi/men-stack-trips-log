@@ -1,0 +1,18 @@
+<!-- views/trips/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trips Index</title>
+  </head>
+  <body>
+    <h1>All Trips</h1>
+    <a href="/trips/new">Add New Trip</a>
+    <ul>
+      <% trips.forEach(trip => { %>
+        <li><a href="/trips/<%= trip._id %>"><%= trip.name %> - <%= new Date(trip.date).toLocaleDateString() %></a></li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
