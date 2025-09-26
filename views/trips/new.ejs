@@ -1,0 +1,29 @@
+<!-- views/trips/new.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Trip</title>
+  </head>
+  <body>
+    <h1>Create a New Trip!</h1>
+    <form action="/trips" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" />
+
+      <label for="status">Status:</label>
+      <select name="status" id="status">
+        <option value="planned">Planned</option>
+        <option value="ongoing">Ongoing</option>
+        <option value="completed">Completed</option>
+      </select>
+
+      <button type="submit">Add Trip</button>
+    </form>
+    <a href="/trips">Back to Trips</a>
+  </body>
+</html>

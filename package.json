@@ -1,0 +1,28 @@
+{
+  "name": "men-stack-trips-log",
+  "version": "1.0.0",
+  "description": "Simple Express application using Mongoose for MongoDB and Node to log trips.",
+  "homepage": "https://github.com/Jpangi/men-stack-trips-log#readme",
+  "bugs": {
+    "url": "https://github.com/Jpangi/men-stack-trips-log/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jpangi/men-stack-trips-log.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.2",
+    "nodemon": "^3.1.10"
+  }
+}
